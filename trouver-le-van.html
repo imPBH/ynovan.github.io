@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+          integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+          crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+            integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+            crossorigin=""></script>
+    <title>Yno'Van | Trouver le van</title>
+
+</head>
+<body>
+<div class="page-wrapper">
+    <div class="nav-wrapper">
+        <nav class="navbar">
+            <a href="/">
+                <img src="resources/logo.png" alt="Company Logo">
+            </a>
+            <div class="menu-toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <ul class="nav menu">
+                <li class="nav-item">
+                    <a href="/">C'est quoi ?</a>
+                </li>
+                <li class="nav-item">
+                    <a href="trouver-le-van.html">Où trouver le van ?</a>
+                </li>
+                <li class="nav-item">
+                    <a href="ecole-ynov.html">L'école Ynov Toulouse</a>
+                </li>
+                <li class="nav-item">
+                    <a href="nous-contacter.html">Nous contacter</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+    <div class="carousel">
+        <div class="carousel-inner">
+            <div style="background-color: orange;" class="carousel-item"><img src="resources/test.jpg"></div>
+            <div style="background-color: orange;" class="carousel-item"><img src="resources/test2.jpg"></div>
+            <div style="background-color: orange;" class="carousel-item"><img src="resources/test3.jpg"></div>
+            <div style="background-color: orange;" class="carousel-item"><img src="resources/test4.jpg"></div>
+        </div>
+        <div class="carousel-controls">
+            <span class="prev"></span>
+            <span class="next"></span>
+        </div>
+        <div class="discover">
+            <button class="discover-bttn" onclick="window.open('https://ynov-toulouse.com/');">Découvrir Ynov Toulouse
+            </button>
+        </div>
+        <div class="carousel-indicators"></div>
+    </div>
+    <div class="parcours">
+        <h1 class="h1title">Le parcours de l'Yno'Van</h1>
+        <h1 class="h1desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+            dolore magna aliqua. Cursus eget nunc scelerisque viverra mauri. </h1>
+        <div id="map"></div>
+    </div>
+</div>
+<script>
+    var map = L.map('map').setView([43.605635, 1.441579], 15);
+
+    var markerCapitole = L.marker([43.604429, 1.443812]).addTo(map);
+    markerCapitole.bindPopup("<b>Place du Capitole</b><br>Le 15/05/2022<br>De 14H à 18H.");
+
+    var markerEsquirol = L.marker([43.6002517, 1.4438341]).addTo(map);
+    markerEsquirol.bindPopup("<b>Place Esquirol</b><br>Le 16/05/2022<br>De 14H à 18H.");
+
+    var markerSaintSernin = L.marker([43.608120, 1.441172]).addTo(map);
+    markerSaintSernin.bindPopup("<b>Place Saint-Sernin</b><br>Le 17/05/2022<br>De 14H à 18H.");
+
+    var markerWilson = L.marker([43.605367, 1.448135]).addTo(map);
+    markerWilson.bindPopup("<b>Place Wilson</b><br>Le 18/05/2022<br>De 14H à 18H.");
+
+    var markerSaintPierre = L.marker([43.603537, 1.435769]).addTo(map);
+    markerSaintPierre.bindPopup("<b>Place Saint-Pierre</b><br>Le 19/05/2022<br>De 14H à 18H.");
+
+    var markerCompans = L.marker([43.610363, 1.435479]).addTo(map);
+    markerCompans.bindPopup("<b>Esplanade Compans-Caffarelli</b><br>Le 20/05/2022<br>De 14H à 18H.");
+
+
+    L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
+        attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+        maxZoom: 18,
+        id: 'mapbox/streets-v11',
+        tileSize: 512,
+        zoomOffset: -1,
+        accessToken: 'pk.eyJ1IjoiaW1wYmgiLCJhIjoiY2wxZGV0eGUzMGdudjNrcDI4MjA2MXJ2byJ9.qZ3ScjKlGGhx2Ia_FDBorA'
+    }).addTo(map);
+</script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
+<script src="nav.js"></script>
+<script src="carousel.js"></script>
+</body>
+</html>

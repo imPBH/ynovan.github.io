@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Yno'Van | C'est quoi ?</title>
+
+</head>
+<body>
+<div class="page-wrapper">
+    <div class="nav-wrapper">
+        <nav class="navbar">
+            <a href="/">
+                <img src="resources/logo.png" alt="Company Logo">
+            </a>
+            <div class="menu-toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <ul class="nav menu">
+                <li class="nav-item">
+                    <a href="/">C'est quoi ?</a>
+                </li>
+                <li class="nav-item">
+                    <a href="trouver-le-van.html">Où trouver le van ?</a>
+                </li>
+                <li class="nav-item">
+                    <a href="ecole-ynov.html">L'école Ynov Toulouse</a>
+                </li>
+                <li class="nav-item">
+                    <a href="nous-contacter.html">Nous contacter</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+    <div class="carousel">
+        <div class="carousel-inner">
+            <div style="background-color: orange;" class="carousel-item"><img src="resources/test.jpg"></div>
+            <div style="background-color: orange;" class="carousel-item"><img src="resources/test2.jpg"></div>
+            <div style="background-color: orange;" class="carousel-item"><img src="resources/test3.jpg"></div>
+            <div style="background-color: orange;" class="carousel-item"><img src="resources/test4.jpg"></div>
+        </div>
+        <div class="carousel-controls">
+            <span class="prev"></span>
+            <span class="next"></span>
+        </div>
+        <div class="discover">
+            <button class="discover-bttn" onclick="window.open('https://ynov-toulouse.com/');">Découvrir Ynov Toulouse
+            </button>
+        </div>
+        <div class="carousel-indicators"></div>
+    </div>
+    <div class="what-is">
+        <div class="left-side">
+            <h1 class="left-text">C'est quoi Yno'Van ?</h1>
+            <br>
+            <h2 class="left-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                incididunt ut labore et dolore magna aliqua. Cursus eget nunc scelerisque viverra mauri. </h2>
+            <br>
+            <a class="find-button" href="/trouver-le-van.html">
+                <span>Trouver le van</span>
+                <img src="resources/arrow.svg">
+            </a>
+        </div>
+        <div class="right-side">
+            <img src="resources/van.jpg">
+        </div>
+    </div>
+</div>
+
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
+<script src="nav.js"></script>
+<script src="carousel.js"></script>
+</body>
+</html>

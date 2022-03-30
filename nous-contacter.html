@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Yno'Van | Nous contacter</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+          integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+          crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+            integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+            crossorigin=""></script>
+
+</head>
+<body>
+<div class="page-wrapper">
+    <div class="nav-wrapper">
+        <nav class="navbar">
+            <a href="/">
+                <img src="resources/logo.png" alt="Company Logo">
+            </a>
+            <div class="menu-toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <ul class="nav menu">
+                <li class="nav-item">
+                    <a href="/">C'est quoi ?</a>
+                </li>
+                <li class="nav-item">
+                    <a href="trouver-le-van.html">Où trouver le van ?</a>
+                </li>
+                <li class="nav-item">
+                    <a href="ecole-ynov.html">L'école Ynov Toulouse</a>
+                </li>
+                <li class="nav-item">
+                    <a href="nous-contacter.html">Nous contacter</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+    <div class="carousel">
+        <div class="carousel-inner">
+            <div style="background-color: orange;" class="carousel-item"><img src="resources/test.jpg"></div>
+            <div style="background-color: orange;" class="carousel-item"><img src="resources/test2.jpg"></div>
+            <div style="background-color: orange;" class="carousel-item"><img src="resources/test3.jpg"></div>
+            <div style="background-color: orange;" class="carousel-item"><img src="resources/test4.jpg"></div>
+        </div>
+        <div class="carousel-controls">
+            <span class="prev"></span>
+            <span class="next"></span>
+        </div>
+        <div class="discover">
+            <button class="discover-bttn" onclick="window.open('https://ynov-toulouse.com/');">Découvrir Ynov Toulouse
+            </button>
+        </div>
+        <div class="carousel-indicators"></div>
+    </div>
+    <div class="contact-us-container">
+        <div class="contact">
+            <a class="contacter-ynov">Contacter Ynov Toulouse :</a>
+            <br>
+            <a class="contact-method">
+                <img src="resources/telephone.png">
+                <span>05 82 95 10 48</span>
+            </a>
+            <a class="contact-method">
+                <img src="resources/mail.png">
+                <span>contact-toulouse@ynov.com</span>
+            </a>
+        </div>
+        <div class="contact">
+            <a class="contacter-ynov">Venez nous voir :</a>
+            <br>
+            <a class="contact-method">
+                <span>2 Place de l'Europe</span>
+            </a>
+            <a class="contact-method">
+                <span>31000 Toulouse</span>
+            </a>
+        </div>
+    </div>
+    <div class="address-map">
+        <div id="map"></div>
+    </div>
+</div>
+<script>
+    var map = L.map('map').setView([43.6102637, 1.4317339], 16);
+
+    var marker = L.marker([43.6102637, 1.4317339]).addTo(map);
+    marker.bindPopup("<b>Toulouse Ynov Campus</b><br>2 Place de l'Europe<br>31000 Toulouse").openPopup();
+
+    L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
+        attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+        maxZoom: 18,
+        id: 'mapbox/streets-v11',
+        tileSize: 512,
+        zoomOffset: -1,
+        accessToken: 'pk.eyJ1IjoiaW1wYmgiLCJhIjoiY2wxZGV0eGUzMGdudjNrcDI4MjA2MXJ2byJ9.qZ3ScjKlGGhx2Ia_FDBorA'
+    }).addTo(map);
+</script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
+<script src="nav.js"></script>
+<script src="carousel.js"></script>
+</body>
+</html>
