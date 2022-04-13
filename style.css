@@ -563,8 +563,11 @@ h2 {
 }
 
 .discover-the-school .h1title {
-    padding-top: 30px;
     color: black;
+}
+
+.h1title {
+    padding-top: 30px;
 }
 
 .h1desc {
