@@ -12,6 +12,9 @@
     <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
             integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
             crossorigin=""></script>
+    <link rel = "icon" href =
+            "resources/logo.png"
+          type = "image/x-icon">
     <title>Yno'Van | Trouver le van</title>
 
 </head>
@@ -61,9 +64,11 @@
         <div class="carousel-indicators"></div>
     </div>
     <div class="parcours">
-        <h1 class="h1title">Le parcours de l'Yno'Van</h1>
-        <h1 class="h1desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-            dolore magna aliqua. Cursus eget nunc scelerisque viverra mauri. </h1>
+        <h1 class="h1title">Le parcours de Yno'Van</h1>
+        <h1 class="h1desc">Yno'Van sera présent sur une place incontournable de Toulouse chaque mois.
+            <br>Venez nous rencontrer et en apprendre plus sur notre école et nos formations sur vos places préférées de Toulouse
+            <br><br>
+            Plus d'informations sur la date et l'heure en cliquant sur les points bleus :</h1>
         <div id="map"></div>
     </div>
 </div>
@@ -71,23 +76,19 @@
     var map = L.map('map').setView([43.605635, 1.441579], 15);
 
     var markerCapitole = L.marker([43.604429, 1.443812]).addTo(map);
-    markerCapitole.bindPopup("<b>Place du Capitole</b><br>Le 15/05/2022<br>De 14H à 18H.");
-
-    var markerEsquirol = L.marker([43.6002517, 1.4438341]).addTo(map);
-    markerEsquirol.bindPopup("<b>Place Esquirol</b><br>Le 16/05/2022<br>De 14H à 18H.");
-
-    var markerSaintSernin = L.marker([43.608120, 1.441172]).addTo(map);
-    markerSaintSernin.bindPopup("<b>Place Saint-Sernin</b><br>Le 17/05/2022<br>De 14H à 18H.");
-
-    var markerWilson = L.marker([43.605367, 1.448135]).addTo(map);
-    markerWilson.bindPopup("<b>Place Wilson</b><br>Le 18/05/2022<br>De 14H à 18H.");
+    markerCapitole.bindPopup("<b>Place du Capitole</b><br>Le 01/10/2022<br>De 9H-12H à 14H-18.");
 
     var markerSaintPierre = L.marker([43.603537, 1.435769]).addTo(map);
-    markerSaintPierre.bindPopup("<b>Place Saint-Pierre</b><br>Le 19/05/2022<br>De 14H à 18H.");
+    markerSaintPierre.bindPopup("<b>Place Saint-Pierre</b><br>Le 05/11/2022<br>De 9H-12H à 14H-18.");
 
-    var markerCompans = L.marker([43.610363, 1.435479]).addTo(map);
-    markerCompans.bindPopup("<b>Esplanade Compans-Caffarelli</b><br>Le 20/05/2022<br>De 14H à 18H.");
+    var markerArnaudBernard = L.marker([43.610795, 1.439072]).addTo(map);
+    markerArnaudBernard.bindPopup("<b>Place Arnaud Bernard</b><br>Le 07/01/2023<br>De 9H-12H à 14H-18.");
 
+    var markerSaintGeorges = L.marker([43.602060, 1.447689]).addTo(map);
+    markerSaintGeorges.bindPopup("<b>Place Saint Georges</b><br>Le 04/02/2023<br>De 9H-12H à 14H-18.");
+
+    var markerBourse = L.marker([43.601331, 1.442219]).addTo(map);
+    markerBourse.bindPopup("<b>Place de la Bourse</b><br>Le 04/03/2023<br>De 9H-12H à 14H-18.");
 
     L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
         attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
